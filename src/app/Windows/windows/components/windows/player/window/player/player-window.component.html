@@ -1,0 +1,36 @@
+<mat-dialog-content class="mat-dialog-container" cdkDrag  cdkDragRootElement=".cdk-overlay-pane" cdkDragHandle >
+
+  <div class="window-header" >
+    <div class="window-name">
+      <h1>
+       Player
+      </h1>
+
+    </div>
+    <div class="top-btns">
+      <ul>
+        <li>
+          <button (click)="minimize()">_</button>
+
+        </li>
+        <li>
+          <button (click)="maximize()">max</button>
+        </li>
+        <li>
+
+          <button (click)="close()">X</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="content">
+     <win-player  class="player">
+       <source [src]="music" type="video/mp4">
+     </win-player>
+
+    </div>
+
+
+  </div>
+</mat-dialog-content>
+

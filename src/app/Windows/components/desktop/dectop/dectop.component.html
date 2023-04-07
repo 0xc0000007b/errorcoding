@@ -1,0 +1,75 @@
+<mat-dialog-content class="main-win" >
+  <div class="windows-desktop"
+
+
+       [ngStyle]="{'background-image': (imageLink)
+       ? 'url('+ imageLink +')' : ''}" [ngStyle]="{'background-repeat': 'no-repeat'}">
+        <input [(ngModel)]="imageLink"  placeholder="input image link" class="absolute bottom-0">
+      <win-context (newName)="setFolderName($event)"    [ngStyle]="{'top': posY, 'left': posX}" outside [x]="posX" [y]="posY" *ngIf="!isHidden">
+
+      </win-context>
+
+    <win-base-window (isWindowClosed)="handleWindow($event)" (isOpenedWindow)="handleClosed($event)" [folderName]="  folderName ? folderName : 'New Folder'" (click)="handleClick()" (contextmenu)="rightClick($event)"><button   class="directory absolute top-8 -left-10
+     w-60" cdkDrag select><span class="material-symbols text-7xl">
+folder
+</span>
+      <span class="name text-center" >
+
+      {{  folderName  ? folderName : 'New Folder'}}
+      </span>
+    </button></win-base-window>
+    <win-base-window (isWindowClosed)="handleWindow($event)" (isOpenedWindow)="handleClosed($event)" [folderName]="  folderName ? folderName : 'New Folder'"> ><button (click)="handleClick()" (contextmenu)="rightClick($event)" class="directory absolute top-32 -left-10 w-60" cdkDrag select outside>
+      <span class="material-symbols text-7xl">
+folder
+</span>
+      <span class="name text-center" >
+
+      {{  folderName  ? folderName : 'New Folder'}}
+      </span></button></win-base-window>
+    <win-base-window (isWindowClosed)="handleWindow($event)" (isOpenedWindow)="handleClosed($event)" [folderName]="  folderName ? folderName : 'New Folder'">><button (click)="handleClick()" (contextmenu)="rightClick($event)" class="directory absolute top-56 -left-10  w-60" select cdkDrag><span class="material-symbols text-7xl">
+folder
+</span>
+      <span class="name text-center" >
+
+      {{  folderName  ? folderName : 'New Folder'}}
+      </span>
+    </button ></win-base-window>
+    <win-base-window (isWindowClosed)="handleWindow($event)" (isOpenedWindow)="handleClosed($event)" (keydown.enter)="isShowing = false;"  (click)="isShowing = true" [folderName]="  folderName ? folderName : 'New Folder'"><button (click)="handleClick()" (contextmenu)="rightClick($event)" class="directory absolute top-96 -left-10 w-60" select cdkDrag><span  class="material-symbols text-7xl">
+folder
+</span>
+      <span class="name text-center" >
+
+      {{  folderName  ? folderName : 'New Folder'}}
+      </span>
+
+    </button>
+
+    </win-base-window>
+    <win-base-window (isPlayerOpen)="handlePlayer($event)" (isPlayerClose)="handlePlayerClosing($event)"  (keydown.enter)="isShowing = false;"  (click)="isShowing = true" [folderName]="  folderName ? folderName : 'Player'"><button (click)="handleClick()" (contextmenu)="rightClick($event)" class="player absolute top-96 -left-10 w-60 mt-24" select cdkDrag><span  class="material-symbols text-7xl">
+play_arrow
+</span>
+      <span class="name text-center" >
+
+      {{  folderName  ? folderName : 'Player'}}
+      </span>
+
+    </button>
+
+    </win-base-window>
+  </div>
+
+  <div class="tasks absolute bottom-10  text-transparent"   *ngFor="let win of windows">
+
+    <div class="opened-window"  *ngIf="isOpenedWindow && !isClosed || isPlayerOpened && !isPlayerClosed">
+
+      <mat-icon>
+
+            {{isFolder ? 'folder' : 'play_arrow'}}
+
+      </mat-icon>
+    </div>
+  </div>
+
+  <win-task-bar  class="task-bar"></win-task-bar>
+
+</mat-dialog-content>

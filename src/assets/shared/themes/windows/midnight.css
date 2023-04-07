@@ -1,0 +1,63 @@
+.windows-desktop {
+
+  background: url("https://img1.akspic.ru/attachments/crops/7/6/6/1/21667/21667-tehnologii-microsoft_windows-energiya-tehnologia-sinij-1366x768.jpg");
+}
+.windows-desktop .name  {
+  color: white;
+}
+
+.window-header {
+  color: white;
+  background: #2f3640;
+  height: 100%;
+}
+.mat-dialog-container {
+  background: #353b48;
+}
+.directory {
+  color: #e64a19;
+}
+
+.tasks {
+  color: #e64a19;
+
+}
+.tasks .opened-window {
+  color: #e64a19;
+  border-bottom-color: #e64a19;
+}
+
+.task-bar {
+  color: #2f3640;
+}
+.start-menu {
+  background: rgba(53, 59, 72, 0.7);
+}
+.start-menu .left-buttons {
+  background: rgba(47, 54, 64, 0.51);
+}
+.start-menu .left-buttons li {
+  color: white;
+}
+.start-menu .left-buttons li:hover {
+  color: rgb(53, 59, 72);
+}
+.power-menu {
+  background: rgba(53, 59, 72, .70);
+
+}
+.power-menu li:hover{
+  background: rgba(255, 255, 255, 0.63);
+
+}
+
+.change-mode {
+  background: #20272f;
+  color: white;
+  transition: all .3s;
+}
+.change-mode:hover {
+  background: rgba(255, 255, 255, 0.45);
+}
+
+

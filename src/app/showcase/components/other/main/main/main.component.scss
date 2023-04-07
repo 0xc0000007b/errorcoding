@@ -1,0 +1,479 @@
+@import 'main-part-1.component';
+@import 'main-part-1.component';
+.about-text {
+  h1 {
+    font-size: 40px;
+  }
+  p {
+    margin-top: 1rem;
+    font-size: 21px;
+  }
+}
+li {
+  color: transparent;
+}
+.projects {
+  position: absolute;
+  left: 18rem;
+  .project-card {
+    min-height: 250px;
+    min-width: 400px;
+    a {
+      position: absolute;
+      top: 70%;
+      border-radius: 10px;
+      left: 30%;
+    }
+  }
+}
+
+.about-text-c-sharp {
+  position: absolute;
+  top: 305vh;
+  width: 1350px;
+  left: -17.5rem;
+  font-size: 19px;
+}
+.about-text-secondary {
+  position: absolute;
+  width: 1330px;
+  left: -17.5rem;
+  font-size: 19px;
+}
+.attempt {
+  h3 {
+    font-size: 25px;
+    color: red;
+  }
+  top: 130%;
+  width: 800px;
+  font-size: 21px;
+  border: 4px solid red;
+  left: -2rem;
+}
+.projects-rx {
+  top: 146%;
+  left: 1rem;
+}
+.projects-sharp {
+  position: absolute;
+  top: 342vh;
+  left: 0;
+}
+.about-text-python {
+  position: absolute;
+  top: 518vh;
+  width: 1350px;
+  left: -17.5rem;
+}
+.projects-python {
+  position: absolute;
+  top: 532vh;
+  left: 0;
+}
+.about-image {
+  display: none;
+}
+.skill-tab {
+  position: absolute;
+  top: 680vh;
+  left: 13%;
+}
+.tab {
+  width: 33%;
+}
+
+.nested-node {
+  padding-left: 80px;
+  width: 100%;
+}
+
+.invisible {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .about-text {
+    position: absolute;
+    left: -5rem;
+    width: 1100px;
+    h1 {
+      font-size: 25px;
+    }
+    p {
+      font-size: 17px;
+    }
+  }
+  .projects {
+    top: 25rem;
+    left: 4rem;
+  }
+
+  .about-text-secondary {
+    width: 1000px;
+    left: -5rem;
+    position: absolute;
+    font-size: 15px;
+  }
+  .attempt {
+    top: 1700px;
+  }
+  .projects-rx {
+    top: 1890px;
+  }
+
+  .about-text-c-sharp {
+    top: 2220px;
+    width: 1000px;
+    font-size: 17px;
+    left: -5rem;
+  }
+
+  .projects-sharp {
+    top: 2560px;
+  }
+  .about-text-python {
+    top: 3780px;
+    width: 1000px;
+    left: -5rem;
+  }
+  .projects-python {
+    position: absolute;
+    top: 3950px;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  .about-text {
+    position: absolute;
+    left: 3rem;
+    width: 700px;
+    h1 {
+      font-size: 25px;
+    }
+    p {
+      font-size: 17px;
+    }
+  }
+  .projects {
+    top: 35rem;
+    left: 1rem;
+  }
+
+  .about-text-secondary {
+    width: 800px;
+    left: 1rem;
+    position: absolute;
+    font-size: 15px;
+  }
+  .attempt {
+    top: 1700px;
+  }
+  .projects-rx {
+    top: 1890px;
+  }
+
+  .about-text-c-sharp {
+    top: 2200px;
+    width: 800px;
+    font-size: 17px;
+    left: 0;
+  }
+
+  .projects-sharp {
+    top: 2560px;
+  }
+  .about-text-python {
+    top: 3780px;
+    width: 800px;
+    left: 0;
+  }
+  .projects-python {
+    position: absolute;
+    top: 3950px;
+  }
+}
+@media screen and (min-width: 950px) and (max-width: 999px) {
+  .about-image {
+    display: block;
+    img {
+      max-width: 850px;
+      height: 130px;
+    }
+  }
+  .about-text {
+    width: 850px;
+    left: -20px;
+    position: absolute;
+    top: 130px;
+    h1 {
+      font-size: 21px;
+    }
+    p {
+      font-size: 15px;
+    }
+  }
+  .projects {
+    top: 580px;
+    left: 2rem;
+  }
+  .about-text-secondary {
+    width: 700px;
+    margin: 0 auto;
+    left: 2rem;
+    p {
+      position: absolute;
+      font-size: 15px;
+    }
+  }
+
+  .attempt {
+    position: absolute;
+    top: 1720px;
+    width: 750px;
+    font-size: 12px;
+    left: 1rem;
+  }
+  .projects-rx {
+    position: absolute;
+    top: 1900px;
+    left: 0.5rem;
+  }
+  .about-text-c-sharp {
+    position: absolute;
+    font-size: 15px;
+    width: 700px;
+    top: 2230px;
+    left: 2rem;
+  }
+  .projects-sharp {
+    position: absolute;
+    top: 2600px;
+    left: 1rem;
+  }
+  .about-text-python {
+    width: 800px;
+    left: 0;
+    font-size: 13px;
+    top: 3820px;
+  }
+  .projects-python {
+    position: absolute;
+    top: 3970px;
+    left: 1rem;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 950px) {
+  .about-image {
+    display: block;
+    img {
+      height: 130px;
+    }
+  }
+  .about-text {
+    width: 800px;
+    left: 0;
+    position: absolute;
+    top: 130px;
+    h1 {
+      font-size: 21px;
+    }
+    p {
+      font-size: 15px;
+    }
+  }
+  .projects {
+    top: 580px;
+    left: 2rem;
+  }
+  .about-text-secondary {
+    width: 700px;
+    margin: 0 auto;
+    left: 2rem;
+    p {
+      position: absolute;
+      font-size: 15px;
+    }
+  }
+
+  .attempt {
+    position: absolute;
+    top: 1720px;
+    width: 750px;
+    font-size: 12px;
+    left: 1rem;
+  }
+  .projects-rx {
+    position: absolute;
+    top: 1900px;
+    left: 0.5rem;
+  }
+  .about-text-c-sharp {
+    position: absolute;
+    font-size: 15px;
+    width: 700px;
+    top: 2230px;
+    left: 2rem;
+  }
+  .projects-sharp {
+    position: absolute;
+    top: 2600px;
+    left: 1rem;
+  }
+  .about-text-python {
+    width: 800px;
+    left: 0;
+    font-size: 13px;
+    top: 3820px;
+  }
+  .projects-python {
+    position: absolute;
+    top: 3970px;
+    left: 1rem;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 850px) {
+  .about-image {
+    img {
+      min-width: 750px;
+      right: 60px;
+      height: 130px;
+    }
+    display: block;
+  }
+  .about-text {
+    width: 700px;
+    left: 0;
+    position: absolute;
+    top: 130px;
+    h1 {
+      font-size: 19px;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+  .projects {
+    left: -0.5rem;
+    top: 680px;
+  }
+  .about-text-secondary {
+    width: 700px;
+    margin: 0 auto;
+    left: 2rem;
+    p {
+      position: absolute;
+      font-size: 12px;
+    }
+  }
+
+  .attempt {
+    position: absolute;
+    top: 1670px;
+    width: 380px;
+    font-size: 12px;
+    left: 12rem;
+  }
+  .projects-rx {
+    position: absolute;
+    top: 1900px;
+    left: 0.5rem;
+  }
+  .about-text-c-sharp {
+    position: absolute;
+    font-size: 12px;
+    width: 700px;
+    top: 2220px;
+    left: 2rem;
+  }
+  .projects-sharp {
+    position: absolute;
+    top: 2500px;
+    left: 0.5rem;
+  }
+  .about-text-python {
+    width: 700px;
+    left: 2rem;
+    font-size: 13px;
+    top: 3710px;
+  }
+  .projects-python {
+    position: absolute;
+    top: 3860px;
+    left: -0.5rem;
+  }
+}
+
+@media screen and (min-width: 850px) and (max-width: 900px) {
+  .about-image {
+    img {
+      max-width: 750px;
+
+      height: 130px;
+    }
+    display: block;
+  }
+  .about-text {
+    width: 750px;
+    left: 0;
+    position: absolute;
+    top: 130px;
+    h1 {
+      font-size: 19px;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+  .projects {
+    left: -0.5rem;
+    top: 680px;
+  }
+  .about-text-secondary {
+    width: 700px;
+    margin: 0 auto;
+    left: 2rem;
+    p {
+      position: absolute;
+      font-size: 12px;
+    }
+  }
+
+  .attempt {
+    position: absolute;
+    top: 1670px;
+    width: 380px;
+    font-size: 12px;
+    left: 12rem;
+  }
+  .projects-rx {
+    position: absolute;
+    top: 1900px;
+    left: 0.5rem;
+  }
+  .about-text-c-sharp {
+    position: absolute;
+    font-size: 12px;
+    width: 700px;
+    top: 2220px;
+    left: 2rem;
+  }
+  .projects-sharp {
+    position: absolute;
+    top: 2500px;
+    left: 0.5rem;
+  }
+  .about-text-python {
+    width: 700px;
+    left: 2rem;
+    font-size: 13px;
+    top: 3710px;
+  }
+  .projects-python {
+    position: absolute;
+    top: 3860px;
+    left: -0.5rem;
+  }
+}

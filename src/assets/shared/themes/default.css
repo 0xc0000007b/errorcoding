@@ -1,0 +1,60 @@
+header {
+  background: #673AB7;
+}
+.project-card {
+  color: #000;
+}
+.hamburger-menu {
+  background: #E9D5FF;
+}
+.project-card a {
+  background: #673AB7;
+  color: #fff;
+  transition: .3s all ease-in-out;
+}
+
+.project-card a:hover {
+  background: transparent;
+  color: #673AB7;
+  box-shadow: 3px 3px 0 0.1px inset #673AB7;
+}
+.about-text a {
+  transition: .3s all ease-in-out;
+}
+
+
+.about-text a:hover,
+.about-text-secondary a:hover,
+.about-text-c-sharp a:hover,
+.about-text-python a:hover
+{
+  text-decoration: none;
+  color: #673AB7;
+}
+
+.footer {
+  background: #673AB7;
+}
+.spoiler {
+  border: 2px dashed #673AB7;
+}
+.number {
+  border: 1px solid red;
+  background: rgb(40%, 23%, 72%, .4);
+  color: white;
+}
+
+.form input{
+  color: #673AB7;
+}
+.progress {
+  color: #673AB7;
+}
+.button {
+  color: #673AB7;
+  border: 3px solid #673AB7;
+  padding: 10px;
+}
+
+
+

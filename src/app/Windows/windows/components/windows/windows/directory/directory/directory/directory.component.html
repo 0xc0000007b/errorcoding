@@ -1,0 +1,40 @@
+<mat-dialog-content class="mat-dialog-container" cdkDrag  cdkDragRootElement=".cdk-overlay-pane" cdkDragHandle (resize)="updateSize()"  >
+
+  <div class="window-header" >
+    <div class="window-name">
+      <h1>
+        {{windowName}}
+      </h1>
+
+    </div>
+    <div class="top-btns">
+      <ul>
+        <li>
+          <button (click)="minimize()">_</button>
+
+        </li>
+        <li>
+          <button (click)="maximize()">max</button>
+        </li>
+        <li>
+
+          <button (click)="close()">X</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <p class="absolute top-4 left-7">Files</p>
+     <win-treeview [dataSource]="nestedDataSource" [dataControl]="nestedNodeControl"></win-treeview>
+    <div class="window">
+        <win-folder-change class="absolute top-10 left-36"></win-folder-change>
+    </div>
+
+    </div>
+
+
+  </div>
+</mat-dialog-content>
+
+
+

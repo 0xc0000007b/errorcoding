@@ -1,0 +1,184 @@
+.task-bar {
+  min-width: 100vw;
+  background: #bdc3c7;
+  height: 50px;
+
+  .start-btn {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+  }
+  .start-menu {
+    height: 400px;
+    width: 300px;
+
+    position: absolute;
+    bottom: 50px;
+    .left-buttons {
+      position: absolute;
+
+      bottom: 0;
+      height: 100%;
+      padding-top: 90%;
+      padding-left: 20px;
+      li {
+        transition: all 0.3s;
+        margin-top: 30px;
+
+        &:hover {
+        }
+      }
+    }
+    .settings {
+      margin-left: 20px;
+    }
+    .power-menu {
+      width: 120px;
+
+      display: inline-block;
+      position: absolute;
+      height: 120px;
+      left: 0;
+      padding-left: -20px;
+      bottom: 26px;
+
+      ul {
+        li {
+          margin-top: 3px;
+          padding-left: 12px;
+          span {
+            text-align: center;
+            position: absolute;
+            margin-top: 3px;
+            left: 45px;
+          }
+        }
+      }
+    }
+    .power-menu-full {
+    }
+  }
+  .search {
+    position: absolute;
+    width: 400px;
+    height: 70px;
+    left: 60px;
+    input {
+      width: 400px;
+      height: 50px;
+      color: black;
+    }
+    .search-bar {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+    }
+  }
+  .multi-task-mode {
+    position: absolute;
+    left: 380px;
+    width: 60px;
+    color: black;
+    top: 15px;
+  }
+  .task-bar-items {
+    position: absolute;
+    width: 800px;
+    left: 4900px;
+    top: 20px;
+    ul {
+      display: inline-flex;
+      li {
+        margin-left: 50px;
+        transition: 0.3s all;
+        padding-bottom: 8px;
+        &:hover {
+          border-bottom: 3px solid #0078d7;
+        }
+      }
+    }
+  }
+  .tray {
+    position: absolute;
+    right: 550px;
+    color: black;
+    .open-tray {
+      position: absolute;
+      top: 0;
+      font-size: 20px;
+      padding: 20px;
+      &:hover {
+        background: rgba(255, 255, 255, 0.5);
+      }
+    }
+    .hidden-icons {
+      position: absolute;
+      display: grid;
+      width: 100px;
+      height: 150px;
+      background: #d9d9d9;
+      right: -4.5rem;
+      bottom: 0;
+    }
+  }
+  .activities {
+    position: absolute;
+    right: 120px;
+    color: black;
+
+    height: 70px;
+    ul {
+      display: inline-flex;
+      li {
+        margin-left: 5px;
+
+        transition: all 0.3s;
+        padding: 15px;
+        &:hover {
+          background: rgba(255, 255, 255, 0.5);
+        }
+      }
+    }
+  }
+  .time {
+    position: absolute;
+    color: black;
+    right: 30px;
+    top: 5px;
+    .clock {
+      font-size: 25px;
+      position: absolute;
+      top: 10px;
+      left: 15px;
+    }
+    .calendar {
+      overflow-x: hidden;
+      right: -3rem;
+      width: 400px;
+      height: 600px;
+      background: #d9d9d9;
+      position: absolute;
+      bottom: 45px;
+      .heading {
+        border-top: 1px solid #eee;
+        display: inline-flex;
+        padding-top: 5px;
+        width: 100%;
+        position: absolute;
+        top: 9%;
+        margin-right: 5px;
+        font-size: 22px;
+      }
+      .date {
+        font-size: 15px;
+      }
+      .datePicker {
+        position: absolute;
+        top: 80px;
+        left: -7rem;
+        width: 400px;
+        cursor: pointer;
+      }
+    }
+  }
+}

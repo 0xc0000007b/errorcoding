@@ -1,0 +1,52 @@
+.header {
+  height: 80px;
+  background-color: #6c0909;
+}
+.project-card {
+  color: #000;
+}
+.hamburger-menu {
+  background: #3B82F6;
+}
+
+.hamburger-menu a:hover,
+.hamburger-menu li:hover {
+
+  color: #F43F5E;
+}
+.project-card {
+  transition: .3s all;
+}
+.project-card:hover {
+  color: white;
+  background: #A5B4FC;
+}
+
+.project-card a {
+  background: #DC2626;
+  color: white;
+  transition: .3s all ease-in-out;
+}
+
+.project-card a:hover {
+  background: transparent;
+  color: white;
+  box-shadow: 3px 3px 0 0.1px inset #E0F2FE;
+}
+.about-text a {
+  transition: .3s all ease-in-out;
+}
+
+
+.about-text a:hover,
+.about-text-secondary a:hover,
+.about-text-c-sharp a:hover,
+.about-text-python a:hover
+{
+  text-decoration: none;
+  color: #F43F5E;
+}
+.footer {
+  height: 80px;
+  background-color: #6c0909;
+}

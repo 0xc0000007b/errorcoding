@@ -1,0 +1,51 @@
+.windows-desktop {
+  background: url("https://img3.goodfon.ru/original/1368x768/7/6d/ozero-gory-otrazhenie-priroda-3483.jpg") no-repeat;
+}
+.window-header {
+  background: #673AB7;
+  color: white;
+}
+.mat-dialog-container {
+  background: #A5B4FC;
+}
+.directory {
+  color: #673AB7;
+}
+
+.task-bar {
+  color: #673AB7;
+}
+.start-menu {
+  background: rgba(103, 58, 183, 0.44);
+}
+.start-menu .left-buttons {
+  color: white;
+  background: rgba(103, 58, 183, 0.63);
+  box-shadow: black 0 0 3px 0  ;
+}
+.start-menu li:hover {
+  color: rgba(172, 104, 238, 0.37);
+}
+.power-menu {
+  background: rgba(103, 58, 183, 0.63);
+}
+.power-menu li:hover {
+  color: white;
+  background: rgba(172, 145, 220, 0.95);
+}
+.tasks {
+  color: #673AB7;
+
+}
+.tasks .opened-window {
+  color: #673AB7;
+  border-bottom-color: #673AB7;
+}
+.change-mode {
+  background: #673AB7;
+  color: white;
+  transition: all .3s;
+}
+.change-mode:hover {
+  background: rgba(255, 255, 255, 0.45);
+}

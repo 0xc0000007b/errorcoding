@@ -1,0 +1,70 @@
+:root {
+  --color: #353b48;
+}
+
+.header {
+  background-color: #2f3640;
+  height: 80px;
+
+}
+
+
+
+.hamburger-menu {
+  background: #353b48;
+
+}
+
+.hamburger-menu li:hover {
+  color: #353b48;
+}
+
+ body{
+ height: 100vh;
+  width: 100%;
+  background: #2C3A47;
+  color: white;
+}
+main {
+  color: white;
+}
+
+.about-text h1, .about-text p{
+  color: white;
+}
+
+.project-card {
+  color: var(--color);
+}
+
+.project-card a {
+  background: #bdc3c7;
+  color: #fff;
+  transition: .3s ease all;
+}
+
+.project-card a:hover {
+  background: transparent;
+  color: #2f3640;
+  box-shadow: 3px 3px 0 0.1px inset #2f3640;
+}
+
+
+
+
+.about-text a:hover,
+.about-text-secondary a:hover,
+.about-text-c-sharp a:hover,
+.about-text-python a:hover
+{
+  text-decoration: none;
+}
+
+.footer {
+  background-color: #2f3640;
+  height: 80px;
+
+}
+win-folder-change .mat-tab-label {
+  color: #2f3640;
+}

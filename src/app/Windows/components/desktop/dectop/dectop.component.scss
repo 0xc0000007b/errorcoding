@@ -1,0 +1,77 @@
+.windows-desktop {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  min-width: 205vh;
+  left: 0;
+  right: 0;
+
+  background-size: cover;
+  height: calc(100% - 50px);
+}
+input {
+  position: absolute;
+  color: black;
+  bottom: -3.2rem;
+  height: 50px;
+  width: 300px;
+  left: 4rem;
+  z-index: 5;
+}
+.directory {
+}
+.task-bar {
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.name {
+  font-size: 12px;
+  position: absolute;
+  top: 70px;
+  right: 0rem;
+  color: black;
+  width: 100%;
+  font-family: Arial;
+}
+.context {
+  display: block;
+}
+
+.tasks {
+  position: absolute;
+  height: 50px;
+  left: 28.5%;
+  bottom: 0;
+  z-index: 1000;
+
+  width: 50px;
+  text-align: center;
+  align-items: center;
+  padding-top: 5px;
+  transition: 0.3s all;
+
+  .opened-window {
+    position: absolute;
+    top: -0.1px;
+    padding-top: 15px;
+    padding-bottom: 4px;
+    width: 45px;
+    border-bottom: 5px solid;
+
+    transition: 0.3s all;
+    &:hover {
+      width: 50px;
+      background: rgba(255, 255, 255, 0.4);
+    }
+  }
+}
+.context {
+  z-index: 10;
+  input {
+    outline: none;
+    color: black;
+    border: none;
+  }
+}

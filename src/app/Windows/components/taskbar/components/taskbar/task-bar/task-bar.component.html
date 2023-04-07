@@ -1,0 +1,113 @@
+<div class="task-bar">
+    <button outside (click)="setStartOpened()" class="start-btn"><mat-icon>desktop_windows</mat-icon></button>
+  <div [@openStart]="isOpened" class="start-menu">
+
+    <div class="left-buttons" >
+        <ul>
+          <li>
+
+            <win-base-window (isWindowClosed)="handleClosing($event)" (isOpenedWindow)="handleWindow($event)"><button  class="settings  start absolute left-0" ><mat-icon (click)="handleClick()">
+                settings</mat-icon></button></win-base-window>
+          </li>
+          <li>
+            <button outside (click)="setPowerOpened()"><mat-icon>power_settings_new</mat-icon></button>
+
+            <div [@openPower]="isOpenedPower" class="power-menu">
+              <ul [@openPower]="isOpenedPower">
+                <li>
+                  <button (click)="shutdown()"><mat-icon>power_settings_new</mat-icon><span>Shutdown</span></button>
+                </li>
+                <li>
+                  <button><mat-icon>shutter_speed</mat-icon><span>Sleep</span></button>
+                </li>
+                <li>
+                  <button (click)="reload()"><mat-icon>restore</mat-icon><span>Restart</span></button>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+  </div>
+
+</div>
+
+  <div class="multi-task-mode"><mat-icon>storage</mat-icon></div>
+  <div class="task-bar-items">
+    <ul>
+      <li>
+        <button><mat-icon>open_in_browser</mat-icon></button>
+      </li>
+      <li>
+        <button><mat-icon>folder</mat-icon></button>
+      </li>
+      <li>
+        <button><mat-icon>mail</mat-icon></button>
+      </li>
+    </ul>
+  </div>
+  <div class="tray"  outside >
+    <button class="open-tray"  (click)="setSearchOpened()" >˄</button>
+    <div class="hidden-icons" [@openSearch]="isSearchOpened">
+
+    <ul>
+
+      <li>
+        <button></button>
+      </li>
+      <li>
+        <button></button>
+      </li>
+      <li>
+        <button></button>
+      </li>
+    </ul>
+    </div>
+  </div>
+  <div class="activities" (click)="handleClick()" >
+    <ul>
+      <li>
+        <button><mat-icon>meeting_room</mat-icon></button>
+      </li>
+      <li>
+        <button><mat-icon>battery_full</mat-icon></button>
+      </li>
+      <li>
+        <button (click)="networkIsOn = !networkIsOn">
+          <mat-icon *ngIf="networkIsOn">network_wifi</mat-icon>
+          <mat-icon *ngIf="!networkIsOn">signal_wifi_off</mat-icon>
+        </button>
+      </li>
+      <li>
+        <button (keydown.space)="languageSwitch = !languageSwitch">
+          <span *ngIf="languageSwitch">ENG</span>
+          <span *ngIf="!languageSwitch">RU</span>
+        </button>
+      </li>
+
+    </ul>
+  </div>
+  <div class="time" >
+    <button outside (click)="setCalendarOpened()">
+      <span >{{hour}}:{{minutes}}</span>&nbsp;
+      <span *ngIf="hour >= 12">PM</span>
+      <span *ngIf="hour < 12">AM</span><br>
+      <span >{{date | date:'d/M/YYYY'}}</span>
+    </button>
+    <div [@openCalendar]="openCalendar" class="calendar">
+      <div class="clock">
+        <span>{{hour}}:{{minutes}}:{{seconds}}</span>&nbsp;
+        <span *ngIf="hour >= 12">PM</span>
+        <span *ngIf="hour < 12">AM</span><br>
+        <span class="date">{{dateService.date | async | moment:'dddd, MM DD, YYYY'}}</span>
+      </div>
+      <div class="heading">
+          <win-calendar-heading/>
+      </div>
+      <div >
+        <win-calendar class="datePicker"/>
+      </div>
+    </div>
+  </div>
+
+
+</div>

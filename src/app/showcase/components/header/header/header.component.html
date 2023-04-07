@@ -1,0 +1,51 @@
+
+
+<header class="w-screen bg-purple-700 flex h-16 flex-col rounded-b-lg">
+  <div class="header w-screen min-w-max">
+    <a routerLink="/home">
+    <div class="logo">
+<!--      LOGO-->
+      <app-logo class="text-logo "/>
+      <div class="logo-image
+      absolute left-5 top-0.5" >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          width="100px" height="60px">
+          <image  x="0px" y="0px" width="100px" height="60px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAA8CAQAAAA6NtdFAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnAxwLIA+TlMW/AAAAnUlEQVRo3u3awQ3CMBQE0bVFD5FoI6d0QUEc6Y1KQEoVP0UYyWM0zw3s+PxbfXLP+r6tKq+8Z+8YdOSZqtori7+9qifZZn/osC3pszf8iiE0htAYQmMIjSE0htAYQmMIjSE0htAYQmMIjSE0htAYQmMIjSE0htAYQmMIjSE0htAYQmMIjSE0htD0JOfsEcPO5JbksfzB7JG0fzkpvwCq2XLc9MmKlwAAAABJRU5ErkJggg==" />
+          <text kerning="auto" font-family="Myriad Pro" fill="rgb(0, 0, 0)" transform="matrix( 0.38700783481039, 0, 0, 0.67880244615794,37.2850228460719, 32.8790428077639)" font-size="50px"><tspan font-size="50px" font-family="Azonix" fill="#FFFFFF">EC</tspan></text>
+          <image  x="60px" y="18px" width="6px" height="6px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAMAAADXEh96AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAb1BMVEUkGhIqHx0YIhcULBVaMDCvUVivUlZLODBUOjFeMzi1R0qtTU+0TUW8RFtVOS5YNTJSOTq5RWGtSlxDPjrGRlz/U3H/XGa0TVH9U2hmGyRsGBv9Xmz0WVpiHx1sGhr5W2/HS1D/V27/WWPFR0j/////pA/CAAAAFHRSTlMAAAAAjerqjY2N+Pj4+I2NjerqjTWAFQ0AAAABYktHRCS0BvmZAAAAB3RJTUUH5wMcCyAPk5TFvwAAADJJREFUCNdjYGBhZWNnZOAQERUT52TgkpCUkuZm4JGRlZPnZeBTUFRS5mdgEhAUEmYGAC1hAne9b8D0AAAAAElFTkSuQmCC" />
+          <text kerning="auto" font-family="Myriad Pro" fill="rgb(0, 0, 0)" transform="matrix( 0.09506246261803, 0, 0, 0.35399742654119,69.527586226218, 26.6726531265987)" font-size="50px"><tspan font-size="50px" font-family="Azonix" fill="#FF0000">&#49;&#48;&#48;&#48;&#32;</tspan><tspan font-size="50px" fill="#FF0000">Errors</tspan></text>
+          <text kerning="auto" font-family="Myriad Pro" fill="rgb(0, 0, 0)" transform="matrix( 0.15057454593159, 0, 0, 0.48192387808791,3.54248247099815, 53.9486075067591)" font-size="50px"><tspan font-size="50px" font-family="Azonix" fill="#FFFFFF">Coding&#32;With&#32;Eroors</tspan></text>
+        </svg>
+      </div>
+    </div>
+    </a>
+<!--    THEME-SWITCHER-->
+    <app-theme-swither class="theme-toggler absolute top-2.5 right-96 outline-0"
+                       [options]="options$ | async"
+                       (changeThemeEvent)="themeChangeHandler($event)"/>
+  <div class="menu w-60 absolute right-28 flex top-6 uppercase text-white ">
+    <ul class="inline-flex">
+      <li><a href="#" class=" w-9 mr-16 pb-5 transition-all hover:border-b-white hover:border-b-4 delay-100">Home</a></li>
+      <li><a   (click)="openWindow()" class=" w-9 mr-16 pb-5 transition-all hover:border-b-white hover:border-b-4 delay-100">Tell</a></li>
+      <li><a routerLink="/window" class=" w-9 mr-16 pb-5 transition-all hover:border-b-white hover:border-b-4 delay-100">Experimental</a></li>
+    </ul>
+  </div >
+<!--    RESPONSIVE_MENU_OPEN_BUTTON-->
+    <div  class="hamburger  absolute right-5 top-5 text-white cursor-pointer" >
+          <mat-icon (click)="changeState()">menu</mat-icon>
+    </div>
+<!--    RESPONSIVE_MENU_FOR_SMALL_WIDTH_SCREENS-->
+    <div [@showMenu]="showMenu" class="hamburger-menu z-50 rounded-b uppercase text-white left-2  absolute max-h-60 w-60  p-6 rounded-b-2xl bg-purple-200 top-16">
+      <ul class="text-center">
+        <li class="text-center"><a href="#" class=" w-full   transition-all ">Home</a></li>
+        <li class="text-center"><a  (click)="openWindow()" class=" w-full  transition-all ">Tell <mat-dialog-actions/> </a></li>
+        <li class="text-center"><a routerLink="/window" class=" w-full transition-all ">Experimental</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+
+

@@ -1,0 +1,50 @@
+.progress {
+  position: absolute;
+  top: 14.5rem;
+  width: 70%;
+  left: 14%;
+}
+.start {
+  position: absolute;
+  left: 10px;
+}
+.duration {
+  position: absolute;
+  right: 10px;
+}
+.button {
+  position: absolute;
+  top: 15.5rem;
+  left: 35%;
+  font-size: 40px;
+  border: 3px solid;
+  border-radius: 50%;
+  padding: 35px;
+}
+
+.rewind {
+  position: absolute;
+  left: 80px;
+  top: 18rem;
+  font-size: 31px;
+}
+.forward {
+  position: absolute;
+  right: 80px;
+  top: 18rem;
+  font-size: 23px;
+}
+
+.skip_prev {
+  position: absolute;
+  left: 50px;
+  font-size: 23px;
+  top: 18rem;
+}
+
+.skip_right {
+  position: absolute;
+  right: 50px;
+  top: 18rem;
+  font-size: 23px;
+}

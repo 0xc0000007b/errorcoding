@@ -1,0 +1,55 @@
+<video
+  #video
+  media
+  class="video"
+  [(currentTime)]="currTime"
+  [(paused)]="paused"
+  (click)="toggleState()"
+>
+  <ng-content></ng-content>
+</video>
+<div class="controls">
+  <button
+    class="button"
+    type="button"
+    title="Play/Pause"
+    (click)="toggleState()"
+  >
+    {{icon}}
+  </button>
+
+  <button
+    class="rewind"
+    type="button"
+
+    (click)="turnDown()"
+  >
+    <mat-icon>
+      fast_rewind
+    </mat-icon>
+
+  </button>
+  <button
+    class="forward"
+    type="button"
+
+    (click)="turnUp()"
+
+  >
+  <mat-icon class="">
+    fast_forward
+  </mat-icon>
+  </button>
+
+  <input
+    class="progress"
+    type="range"
+    [max]="video.duration"
+    [(ngModel)]="currTime"
+  >
+  <span>
+    <time class="start">{{currTime | time}}</time>
+
+    <time class="duration">{{video.duration | time}}</time>
+  </span>
+</div>

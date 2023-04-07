@@ -1,0 +1,56 @@
+<mat-dialog-content style="background: #bdc3c7">
+  <div class="form" >
+
+ <mat-label class="heading">Do u Want to tell me?</mat-label>
+  <form [formGroup]="form" >
+    <div class="form-controls">
+
+      <div class="form-control">
+
+      <mat-label  style="font-size: 10px; text-transform: uppercase">Enter you Name</mat-label><br>
+      <input   name="name" formControlName="name"><br>
+      <div class="errors">
+        <span *ngIf="form.controls['name'].errors?.['required'] && form.controls['name'].touched">This field  required</span>
+<!--        <span *ngIf="form.controls.name?.errors.pattern &&  form.controls.name.touched && form.controls.name.dirty">This name has incorrect</span>-->
+      </div>
+
+      </div>
+      <div class="form-control">
+
+      <mat-label style="font-size: 10px; text-transform: uppercase">enter your number</mat-label>
+      <input      formControlName="phoneNumber">
+      <div class="errors">
+        <span *ngIf="form.controls['phoneNumber'].errors?.['required'] && form.controls['phoneNumber'].touched">This field was required</span>
+        <span *ngIf="form.controls['phoneNumber'].errors?.['pattern'] && form.controls['phoneNumber'].touched && form.controls['phoneNumber'].dirty" color [userColor]="'#c0392b'" >Error. Phone mu be contain only digits </span>
+
+      </div>
+
+      </div>
+      <div class="form-control">
+
+      <mat-label style="font-size: 10px; text-transform: uppercase">enter message text</mat-label><br>
+        <textarea      formControlName="messageBody"></textarea>
+      <div class="errors">
+        <span *ngIf="form.controls['messageBody'].errors?.['required'] && form.controls['messageBody'].touched">This field was required</span>
+        <span *ngIf="form.controls['messageBody'].errors?.['invalidWords'] && form.controls['phoneNumber'].touched &&  form.controls['messageBody'].dirty" color [userColor]="'#c0392b'" >Текст содержит невалидные слова. Переписывай </span>
+
+      </div>
+
+      </div>
+    </div>
+  </form>
+    <div *ngIf="form.valid"  class="spoiler">
+
+      <span (click)="setState()">
+        <span *ngIf="isOpened == 'closed'">open spoiler</span>
+        <span *ngIf="isOpened == 'opened'">close spoiler</span>
+      </span>
+      <div class="number" [@clac]="isOpened">
+        <a href="mailto:rammleid123@gmail.com?body={{this.form.controls['messageBody'].value}}">Send email</a>
+      </div>
+    </div>
+
+  </div>
+
+
+  </mat-dialog-content>

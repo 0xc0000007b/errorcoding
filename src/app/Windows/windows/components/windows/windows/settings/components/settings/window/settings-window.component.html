@@ -1,0 +1,46 @@
+
+
+
+<mat-dialog-content cdkDrag cdkDragRootElement=".cdk-overlay-pane" cdkDragHandle (resize)="updateSize()" class="mat-dialog-container" >
+
+  <div class="window-header" >
+    <div class="window-name">
+      <h1>
+        Settings
+      </h1>
+
+    </div>
+    <div class="top-btns">
+    <ul>
+      <li>
+        <button (click)="minimize()">_</button>
+
+      </li>
+      <li>
+        <button (click)="maximize()">max</button>
+      </li>
+      <li>
+
+          <button (click)="close()">X</button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <p>select a theme by click on button</p>
+    <win-settings></win-settings>
+    <div class="absolute top-36 w-full">
+    <p >by these button you can be {{isFullscreen ? 'close' : 'enter'}} fullscreen</p>
+    <button class="change-mode absolute top-32 left-24 px-8 py-2 text-white" *ngIf="isFullscreen" (click)="exitFullscreen()">
+      exit
+    </button>
+    <button  class="change-mode absolute top-32 left-24 px-8 py-2 text-white" *ngIf="!isFullscreen" (click)="enterFullscreen()">
+      enter
+    </button>
+
+    </div>
+  </div>
+
+
+</div>
+</mat-dialog-content>

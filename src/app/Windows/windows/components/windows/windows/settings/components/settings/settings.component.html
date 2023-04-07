@@ -1,0 +1,15 @@
+<button class="menu" (click)="setState()"><mat-icon>menu</mat-icon></button>
+<div class="left-menu" [@openClose]="isOPen">
+
+  <win-settings-tab-list [settings]="settings" ></win-settings-tab-list>
+</div>
+<div class="app-window">
+
+  <div class="theme-change-element">
+    <div>
+      <win-theme-switcher class="themes" [options]="options$ | async" (changeThemeEvent)="changeTheme($event)"></win-theme-switcher>
+
+    </div>
+  </div>
+</div>
+
